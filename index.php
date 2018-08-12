@@ -124,20 +124,19 @@
 	<div class="row"><div class="four columns">
 	<h5>¿Para qué sirve esto?</h5>
 	<p>Esta web te convertirá los horarios de cualquier asignatura impartida de la UC3M <i>(y que aparezca en la aplicación de horarios)</i> a un tipo de archivo llamado <b>iCalendar.</b></p>
-	<p>Los archivos iCalendar pueden luego ser importados en la gran mayoría de programas de calendarios, como iCal, Google Calendar, Evolution, Outlook..</p>
-	<p>También puedes utilizarlos en tu móvil mediante Google Calendar. Simplemente usa (o create) una cuenta de Google, añadelos a tu calendario, y sincroniza Google Calendar con tú smartphone siguiendo las <a href="http://www.google.es/mobile/sync/">instrucciones que encontrarás aquí</a>. Si tu móvil tiene Android, te aparecerán directamente en el calendario.</div>
+	<p>Los archivos iCalendar pueden luego ser importados en Google Calendar e iCal, lo que te permitirá tener el calendario sincronizado en tu móvil.</p>
+	</div>
 	<div class="four columns">
 		<h5>¿Cómo? ¿Cuándo? ¿Por qué?</h5>
-		<p>Simplemente elige la carrera, el grupo y el cuatrimestre en el que estés interesado, y dale al botón. El proceso es fácil, sencillo y para toda la familia. .</p>
-		<p>Eso sí, he de advertirte de que el programa, al interpretar los horarios provenientes de la web de la universidad puede fallar debido a... bueno, ya se sabe cómo es la web de la UC3M.</p>
-		<p>Si no funciona, intentalo de nuevo en unos minutos. Mientras que convertir el horario de formato tarda muy poco, la aplicación de la universidad puede llegar a tardar sus 3 minutos en mostrar el horario. (tener ingenieros para esto..)</p> 
+		<p>Simplemente elige la carrera, el grupo y el cuatrimestre en el que estés interesado, y pulsa Continuar.</p>
+		<p>Si no funciona, intentalo de nuevo en unos minutos. Mientras que convertir el horario de formato tarda muy poco, la aplicación de la universidad en ocasiones tarda unos minutos en generar el horario.</p> 
 		<p>No me hago responsable de prácticas perdidas, exámenes suspensos o viajes de 2 horas de duración hechos para nada. El horario debería salir exáctamente igual al que aparece <a href="http://aplicaciones.uc3m.es/horarios-web/">aquí</a> (clases coincidentes y horarios ilógicos incluidos). Si no lo es, avísame y lo intento arreglar.</p>
 		</div>
 		<div class="four columns"><h5>¿Quién?</h5>
-			<p><a href="http://zen.itram.es">Un antiguo teleco</a> que se aburría y debería estar estudiando.</p>
-			<p>Si tienes algun problema, mándame un e-mail a: zen arroba itram punto es. También estoy en Twitter: <a href="twitter.com/iamzenitram">@iamzenitraM</a></p>
+			<p><a href="http://zen.itram.es">Un antiguo estudiante de Telemática</a> que se aburría en época de exámenes. Todos sabemos que en exámenes es cuando más productivo se es en otras cosas que no sean estudiar.</p>
+			<p>Si tienes algun problema, mándame un e-mail a: zen arroba itram punto e, o también estoy en Twitter: <a href="twitter.com/iamzenitram">@iamzenitraM</a></p>
 			<p>Este programa está desarrollado en PHP usando <a href="http://code.google.com/p/phpquery/">phpQuery</a> para analizar el horario y <a href="http://www.kigkonsult.se/iCalcreator/">iCalCreator</a> para crear el archivo iCalendar.</P>
-			<p>Toda la información ha sido obtenida de diferentes lugares, como <a href="http://aplicaciones.uc3m.es/horarios-web/publicacion/principal.page">Horarios-Web</a> y <a href="https://aplicaciones.uc3m.es/cpa/cpa/generarReport.do">la consulta de programas de asignaturas</a> (para los nombres cortos).</p>
+			<p>Toda la información ha sido obtenida de diferente lugares públicos de la web de la UC3M, como <a href="http://aplicaciones.uc3m.es/horarios-web/publicacion/principal.page">Horarios-Web</a> y <a href="https://aplicaciones.uc3m.es/cpa/cpa/generarReport.do">la consulta de programas de asignaturas</a> (para los nombres cortos).</p>
 			<p>Esta web no tiene relación oficial alguna con la UC3M, salvo la de su dueño, que la <strike>sufre</strike>sufrió todos los días. Pero mereció la pena.</p> </div>
 	</div>
 	
