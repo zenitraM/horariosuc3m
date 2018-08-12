@@ -1,6 +1,7 @@
 <?php
 if (strpos($_SERVER['REQUEST_URI'], basename(__FILE__)) !== false) die();
 include("phpQuery-onefile.php");
+include("tools.php");
 function convertUrlQuery($query) { 
     $queryParts = explode('&', $query); 
     $params = array(); 
@@ -52,9 +53,8 @@ if(!file_exists("data/planes.dat")) {
         $id = explode("(Plan:", $txt);
         $id = explode(")", $id[1]);
         $id = $id[0];
-        $tit = explode("► ", $txt);
-        $tit = explode(" (Plan:", $tit[1]);
-        $tit = $tit[0];
+        $tit = explode(" (Plan:", $txt);
+        $tit = trim($tit[0]);
         $planes[$id] = $tit;
     }
     var_dump($planes);
@@ -67,7 +67,7 @@ if(!file_exists("data/codigos.dat")) {
     $codigos = array();
     foreach($planes as $k=>$v) {
         $url = 'https://aplicaciones.uc3m.es/cpa/findAsignaturas.ajax';
-        $data = array('ano' => '2016', 'codPlan' => $k, "_" => "");
+        $data = array('ano' => get_academic_year(), 'codPlan' => $k, "_" => "");
  
         // use key 'http' even if you send the request to https://...
         $options = array('http' => array(
@@ -92,7 +92,7 @@ if(!file_exists("data/codigos.dat")) {
 //planCentro
 if(!file_exists("data/tree.dat")) {
     $urlsPlanesCent = array();
-    foreach(pq(".enlacePlanCentro") as $linkPlan) {
+    foreach(pq('a[style="color: #fff;"]') as $linkPlan) {
         $lp = pq($linkPlan);
         $urlsPlanesCent[] = $lp->attr("href");
     }

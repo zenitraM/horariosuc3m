@@ -1,4 +1,5 @@
 <?php
+require_once("tools.php");
 include("phpQuery-onefile.php");
 require_once( 'iCalcreator.class.php' );
 $codigos = unserialize(file_get_contents('data/codigos.dat')); 
@@ -51,8 +52,8 @@ class Asignatura {
 
 	function addBloque($v, $bloque) {
 		$vevent = & $v->newComponent( 'vevent' );
-		$year = 2017;
-		if($bloque->fechas[0][1] > 7) $year = 2016;
+		$year = get_academic_year()+1;
+		if($bloque->fechas[0][1] > 7) $year = get_academic_year();
 		// create an event calendar component
 		$start = array( 'year'=>$year, 'month'=>$bloque->fechas[0][1], 'day'=>$bloque->fechas[0][0], 'hour'=>$bloque->horas[0][0], 'min'=>$bloque->horas[0][1], 'sec'=>0 );
 		$vevent->setProperty( 'dtstart', $start );
@@ -159,7 +160,7 @@ class IDHorario {
 		$this->cuatr = $cuatr;
 	}
 	function getURL() {
-		return "https://aplicaciones.uc3m.es/horarios-web/publicacion/2016/porCentroPlanCursoGrupo.tt?plan=".$this->plan."&centro=".$this->centro.
+		return "https://aplicaciones.uc3m.es/horarios-web/publicacion/".get_academic_year()."/porCentroPlanCursoGrupo.tt?plan=".$this->plan."&centro=".$this->centro.
 																											"&curso=".$this->curso."&grupo=".$this->grupo."&tipoPer=C&valorPer=".$this->cuatr;
 	}
 	

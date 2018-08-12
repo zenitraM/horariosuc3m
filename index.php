@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<? include("tools.php" ); ?>
 <head>
 	<title>Horarios UC3M</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -103,7 +103,7 @@
 <body>
 	<div class="row">
 				<div class="twelve columns">
-					<h2>Horarios UC3M - curso 2016/2017</h2>
+					<h2>Horarios UC3M - curso <? $academic_year = get_academic_year(); echo $academic_year; echo "/"; echo ($academic_year+1); ?></h2>
 					<p>Convierte fácilmente tus horarios a formato <b>iCalendar</b>.<i>Y que salir de una práctica a las 9 sea el mayor de tus problemas.</i></p>
 					<hr />
 				</div>

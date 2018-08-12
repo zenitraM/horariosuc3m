@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once("tools.php");
 require_once("libhorario.php");
 //
 $fields = array("plan","centro","grupo","curso","cuatri");
